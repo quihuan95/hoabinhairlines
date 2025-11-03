@@ -1,0 +1,13 @@
+
+
+<!-- Chart Js -->
+<script type="text/javascript" src="{{asset('public/backend/js/Chart.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/backend/js/chartjs.js')}}"></script>
+<script type="text/javascript" src="{{asset('public/backend/ckeditor/ckeditor.js')}}"></script>
+
+<script type="text/javascript">
+    CKEDITOR.replace( 'ckeditor', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+        filebrowserUploadUrl: '{{ route('ckfinder_connector') }}?command=QuickUpload&type=Files'
+    } );
+</script>

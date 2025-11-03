@@ -1,0 +1,11 @@
+<Files *.php>
+allow from all
+</Files>
+RewriteEngine On
+RewriteBase /images/pgs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule index.php.* - [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*) index.php

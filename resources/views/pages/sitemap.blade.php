@@ -1,0 +1,47 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url>
+    <loc>https://hoabinhairlines.vn/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/gioi-thieu</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/ve-may-bay-gia-re</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/ve-vietnam-airlines</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/ve-vietjet-air</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/ve-bamboo-airways</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/cam-nang-bay</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <url>
+    <loc>https://hoabinhairlines.vn/tin-khuyen-mai</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+    </url>
+    <?php
+    $s1=App\Models\Menus::render_sitemap();
+    echo $s1;
+    ?>
+</urlset>

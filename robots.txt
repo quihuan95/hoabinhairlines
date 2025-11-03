@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://hoabinhairlines.vn/sitemap.xml
+Disallow: https://hoabinhairlines.vn/flight?Request=SGNVII31052021-1-0-0

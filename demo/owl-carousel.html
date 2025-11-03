@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>owl-carousel</title>
+	<style type="text/css">
+		#sync1 .item{
+			background: #0c83e7;
+			padding: 80px 0px;
+			margin: 5px;
+			color: #FFF;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			text-align: center;
+		}
+		#sync2 .item{
+			background: #C9C9C9;
+			padding: 10px 0px;
+			margin: 5px;
+			color: #FFF;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			text-align: center;
+			cursor: pointer;
+		}
+		#sync2 .item h1{
+		  font-size: 18px;
+		}
+		#sync2 .synced .item{
+		  background: #0c83e7;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		var sync1 = $(".slider");
+		var sync2 = $(".navigation-thumbs");
+		
+		var thumbnailItemClass = '.owl-item';
+		
+		var slides = sync1.owlCarousel({
+			video:true,
+		  startPosition: 12,
+		  items:1,
+		  loop:true,
+		  margin:10,
+		  autoplay:true,
+		  autoplayTimeout:6000,
+		  autoplayHoverPause:false,
+		  nav: false,
+		  dots: true
+		}).on('changed.owl.carousel', syncPosition);
+		
+		function syncPosition(el) {
+		  $owl_slider = $(this).data('owl.carousel');
+		  var loop = $owl_slider.options.loop;
+		
+		  if(loop){
+			var count = el.item.count-1;
+			var current = Math.round(el.item.index - (el.item.count/2) - .5);
+			if(current < 0) {
+				current = count;
+			}
+			if(current > count) {
+				current = 0;
+			}
+		  }else{
+			var current = el.item.index;
+		  }
+		
+		  var owl_thumbnail = sync2.data('owl.carousel');
+		  var itemClass = "." + owl_thumbnail.options.itemClass;
+		
+		
+		  var thumbnailCurrentItem = sync2
+		  .find(itemClass)
+		  .removeClass("synced")
+		  .eq(current);
+		
+		  thumbnailCurrentItem.addClass('synced');
+		
+		  if (!thumbnailCurrentItem.hasClass('active')) {
+			var duration = 300;
+			sync2.trigger('to.owl.carousel',[current, duration, true]);
+		  }   
+		}
+		var thumbs = sync2.owlCarousel({
+		  startPosition: 12,
+		  items:4,
+		  loop:false,
+		  margin:10,
+		  autoplay:false,
+		  nav: false,
+		  dots: false,
+		  onInitialized: function (e) {
+			var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
+			thumbnailCurrentItem.addClass('synced');
+		  },
+		})
+		.on('click', thumbnailItemClass, function(e) {
+			e.preventDefault();
+			var duration = 300;
+			var itemIndex =  $(e.target).parents(thumbnailItemClass).index();
+			sync1.trigger('to.owl.carousel',[itemIndex, duration, true]);
+		}).on("changed.owl.carousel", function (el) {
+		  var number = el.item.index;
+		  $owl_slider = sync1.data('owl.carousel');
+		  $owl_slider.to(number, 100, true);
+		});
+	</script>
+</head>
+<body>
+<div id="sync1" class="slider owl-carousel">
+  <div class="item"><h1>1</h1></div>
+  <div class="item"><h1>2</h1></div>
+  <div class="item"><h1>3</h1></div>
+  <div class="item"><h1>4</h1></div>
+  <div class="item"><h1>5</h1></div>
+  <div class="item"><h1>6</h1></div>
+  <div class="item"><h1>7</h1></div>
+  <div class="item"><h1>8</h1></div>
+  <div class="item"><h1>9</h1></div>
+  <div class="item"><h1>10</h1></div>
+  <div class="item"><h1>11</h1></div>
+  <div class="item"><h1>12</h1></div>
+  <div class="item"><h1>13</h1></div>
+  <div class="item"><h1>14</h1></div>
+  <div class="item"><h1>15</h1></div>
+  <div class="item"><h1>16</h1></div>
+  <div class="item"><h1>17</h1></div>
+  <div class="item"><h1>18</h1></div>
+  <div class="item"><h1>19</h1></div>
+  <div class="item"><h1>20</h1></div>
+  <div class="item"><h1>21</h1></div>
+  <div class="item"><h1>22</h1></div>
+  <div class="item"><h1>23</h1></div>
+</div>
+<div id="sync2" class="navigation-thumbs owl-carousel">
+  <div class="item"><h1>1</h1></div>
+  <div class="item"><h1>2</h1></div>
+  <div class="item"><h1>3</h1></div>
+  <div class="item"><h1>4</h1></div>
+  <div class="item"><h1>5</h1></div>
+  <div class="item"><h1>6</h1></div>
+  <div class="item"><h1>7</h1></div>
+  <div class="item"><h1>8</h1></div>
+  <div class="item"><h1>9</h1></div>
+  <div class="item"><h1>10</h1></div>
+  <div class="item"><h1>11</h1></div>
+  <div class="item"><h1>12</h1></div>
+  <div class="item"><h1>13</h1></div>
+  <div class="item"><h1>14</h1></div>
+  <div class="item"><h1>15</h1></div>
+  <div class="item"><h1>16</h1></div>
+  <div class="item"><h1>17</h1></div>
+  <div class="item"><h1>18</h1></div>
+  <div class="item"><h1>19</h1></div>
+  <div class="item"><h1>20</h1></div>
+  <div class="item"><h1>21</h1></div>
+  <div class="item"><h1>22</h1></div>
+  <div class="item"><h1>23</h1></div>
+</div>
+
+</body>
+</html>

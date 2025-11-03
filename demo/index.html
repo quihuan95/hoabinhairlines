@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" />
+    
+	<style type="text/css">
+		.ranking_competitiveness { padding: 50px 15px 35px; }
+		.outer { position: relative; }
+		.inner { overflow-x: scroll;overflow-y: visible;width: calc(100% - 400px);margin-left: 300px; }
+		.table_competitiveness { width: 100%;border-collapse: collapse;font-size: 16px;text-align: center;table-layout:fixed; }
+		.table_competitiveness tbody tr{ height:50px; }
+		.table_competitiveness tbody tr:first-child{ background:#17287a!important;color:#fff;border-top:2px solid #111;border-bottom:1px solid #111; }
+		.table_competitiveness tbody tr td:first-child{ text-align:left;width:300px;color:#3a84d6; }
+		.table_competitiveness tbody tr:nth-child(even) td:first-child{ background:#f7f9fc; }
+		.table_competitiveness td{ vertical-align:top;padding:10px;width:100px; }
+		.table_competitiveness td.fix1{ padding:0 10px 13px; }
+		.fix1{ position:absolute;left:0;border-bottom:1px solid #e1e1e1; }
+		.table_competitiveness tbody tr td:nth-child(2){ padding-left:12px; }
+
+	</style>
+</head>
+<body>
+<section class="ranking_competitiveness" id="ranking_competitiveness">
+   <p class="size18 text_bold">Xếp hạng trong Chỉ số năng lực cạnh tranh cấp tỉnh (1-63) Quảng Ninh</p>
+   <div class="outer">
+      <div class="inner">
+         <table class="table_competitiveness">
+            <tbody>
+               <tr class="listYear">
+                  <td class="pl_20 color_fff fix1">Năm</td>
+                  <td class="fix">2006</td>
+                  <td>2007</td>
+                  <td>2008</td>
+                  <td>2009</td>
+                  <td>2010</td>
+                  <td>2011</td>
+                  <td>2012</td>
+                  <td>2013</td>
+                  <td>2014</td>
+                  <td>2015</td>
+                  <td>2016</td>
+                  <td>2017</td>
+                  <td>2018</td>
+                  <td>2019</td>
+                  <td class="fixlast">2020</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Gia nhập thị trường</td>
+                  <td class="fix">6.81</td>
+                  <td>8.73</td>
+                  <td>8.34</td>
+                  <td>7.53</td>
+                  <td>7.28</td>
+                  <td>8.59</td>
+                  <td>8.42</td>
+                  <td>8.09</td>
+                  <td>8.48</td>
+                  <td>9.18</td>
+                  <td>9.28</td>
+                  <td>8.93</td>
+                  <td>7.96</td>
+                  <td>7.16</td>
+                  <td class="fixlast">7.72</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Tiếp cận đất đai</td>
+                  <td class="fix">6.31</td>
+                  <td>6.06</td>
+                  <td>6.74</td>
+                  <td>4.76</td>
+                  <td>5.19</td>
+                  <td>6.30</td>
+                  <td>5.19</td>
+                  <td>5.89</td>
+                  <td>5.51</td>
+                  <td>6.26</td>
+                  <td>6.07</td>
+                  <td>6.43</td>
+                  <td>7.77</td>
+                  <td>7.00</td>
+                  <td class="fixlast">7.12</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Tính minh bạch</td>
+                  <td class="fix">4.77</td>
+                  <td>5.29</td>
+                  <td>5.53</td>
+                  <td>6.32</td>
+                  <td>6.48</td>
+                  <td>6.01</td>
+                  <td>5.99</td>
+                  <td>6.36</td>
+                  <td>6.24</td>
+                  <td>7.09</td>
+                  <td>6.84</td>
+                  <td>6.80</td>
+                  <td>6.94</td>
+                  <td>7.20</td>
+                  <td class="fixlast">6.44</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Chi phí thời gian</td>
+                  <td class="fix">4.74</td>
+                  <td>6.86</td>
+                  <td>5.61</td>
+                  <td>6.90</td>
+                  <td>7.42</td>
+                  <td>6.75</td>
+                  <td>5.66</td>
+                  <td>5.72</td>
+                  <td>6.27</td>
+                  <td>7.27</td>
+                  <td>6.86</td>
+                  <td>7.73</td>
+                  <td>7.70</td>
+                  <td>7.89</td>
+                  <td class="fixlast">8.53</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Chi phí không chính thức</td>
+                  <td class="fix">6.47</td>
+                  <td>7.22</td>
+                  <td>6.86</td>
+                  <td>6.49</td>
+                  <td>6.66</td>
+                  <td>6.73</td>
+                  <td>6.16</td>
+                  <td>8.10</td>
+                  <td>4.89</td>
+                  <td>6.03</td>
+                  <td>6.38</td>
+                  <td>5.79</td>
+                  <td>6.78</td>
+                  <td>7.10</td>
+                  <td class="fixlast">7.37</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Cạnh tranh bình đẳng</td>
+                  <td class="fix">N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>N/A</td>
+                  <td>6.09</td>
+                  <td>3.78</td>
+                  <td>4.69</td>
+                  <td>5.00</td>
+                  <td>6.35</td>
+                  <td>7.02</td>
+                  <td>7.69</td>
+                  <td class="fixlast">7.25</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Tính năng động</td>
+                  <td class="fix">6.56</td>
+                  <td>5.10</td>
+                  <td>6.06</td>
+                  <td>5.90</td>
+                  <td>6.42</td>
+                  <td>5.94</td>
+                  <td>5.74</td>
+                  <td>7.11</td>
+                  <td>4.83</td>
+                  <td>5.31</td>
+                  <td>5.70</td>
+                  <td>6.41</td>
+                  <td>6.23</td>
+                  <td>7.96</td>
+                  <td class="fixlast">7.33</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Dịch vụ hỗ trợ Doanh nghiệp</td>
+                  <td class="fix">5.25</td>
+                  <td>5.12</td>
+                  <td>3.22</td>
+                  <td>4.86</td>
+                  <td>5.76</td>
+                  <td>4.66</td>
+                  <td>4.43</td>
+                  <td>5.81</td>
+                  <td>6.72</td>
+                  <td>5.92</td>
+                  <td>6.26</td>
+                  <td>7.52</td>
+                  <td>6.55</td>
+                  <td>6.68</td>
+                  <td class="fixlast">7.58</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Đào tạo lao động</td>
+                  <td class="fix">4.74</td>
+                  <td>5.27</td>
+                  <td>4.31</td>
+                  <td>5.20</td>
+                  <td>5.94</td>
+                  <td>5.92</td>
+                  <td>6.00</td>
+                  <td>6.21</td>
+                  <td>7.15</td>
+                  <td>7.19</td>
+                  <td>6.94</td>
+                  <td>7.76</td>
+                  <td>7.62</td>
+                  <td>7.95</td>
+                  <td class="fixlast">8.41</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Thiết chế pháp lý</td>
+                  <td class="fix">4.30</td>
+                  <td>5.62</td>
+                  <td>5.40</td>
+                  <td>5.41</td>
+                  <td>5.23</td>
+                  <td>5.10</td>
+                  <td>3.87</td>
+                  <td>4.41</td>
+                  <td>5.28</td>
+                  <td>5.93</td>
+                  <td>5.40</td>
+                  <td>5.63</td>
+                  <td>6.04</td>
+                  <td>7.58</td>
+                  <td class="fixlast">7.76</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>PCI</td>
+                  <td class="text_bold fix">54.05</td>
+                  <td class="text_bold ">58.34</td>
+                  <td class="text_bold ">54.70</td>
+                  <td class="text_bold ">60.81</td>
+                  <td class="text_bold ">64.41</td>
+                  <td class="text_bold ">63.28</td>
+                  <td class="text_bold ">59.55</td>
+                  <td class="text_bold ">63.51</td>
+                  <td class="text_bold ">62.16</td>
+                  <td class="text_bold ">65.75</td>
+                  <td class="text_bold ">65.60</td>
+                  <td class="text_bold ">70.69</td>
+                  <td class="text_bold ">70.36</td>
+                  <td class="text_bold ">73.40</td>
+                  <td class="text_bold fixlast">75.09</td>
+               </tr>
+               <tr>
+                  <td class="fix1"><span class="icontable"></span>Xếp hạng</td>
+                  <td class="text_bold fix">27</td>
+                  <td class="text_bold ">22</td>
+                  <td class="text_bold ">27</td>
+                  <td class="text_bold ">26</td>
+                  <td class="text_bold ">7</td>
+                  <td class="text_bold ">12</td>
+                  <td class="text_bold ">20</td>
+                  <td class="text_bold ">4</td>
+                  <td class="text_bold ">5</td>
+                  <td class="text_bold ">3</td>
+                  <td class="text_bold ">2</td>
+                  <td class="text_bold ">1</td>
+                  <td class="text_bold ">1</td>
+                  <td class="text_bold ">1</td>
+                  <td class="text_bold fixlast">1</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</section>
+</body>
+</html>

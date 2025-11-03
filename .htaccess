@@ -1,0 +1,49 @@
+<IfModule mod_rewrite.c>
+    # Disable index view
+    Options -Indexes
+    # Hide a specific file
+
+    <IfModule mod_negotiation.c>
+        RewriteEngine on 
+        RewriteCond %{HTTPS} !=on [NC] 
+        RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    </IfModule>
+    
+    Redirect 301 /.env /404.html
+    Redirect 301 /flight?Request=SGNTHD31052021-1-0-0 /404.html
+    Redirect 301 /flight?Request=HANDLI31052021-1-0-0 /404.html
+    Redirect 301 /flight?Request=DADSGN31052021-1-0-0 /404.html
+    Redirect 301 /flight?Request=SGNHAN31052021-1-0-0 /404.html
+    Redirect 301 /flight?Request=SGNHAN31052021-1-0-0 /404.html
+    Redirect 301 /huong-dan-cach-lay-ve-may-bay-dien-tu-chi-tiet=C2=A0 /huong-dan-cach-lay-ve-may-bay-dien-tu-chi-tiet
+    Redirect 301 /chinh-sach-hoan-ve-online-cho-hanh-khach-bi-anh-huong-boi-dich-covid-19%C2%A0 /chinh-sach-hoan-ve-online-cho-hanh-khach-bi-anh-huong-boi-dich-covid-19
+    Redirect 301 /ve-vietnam-airlines/dat-ve-may-bay-vietnam-airlines-gia-re-tai-hoa-binh-airlines.html /dat-ve-may-bay-vietnam-airlines-gia-re-tai-hoa-binh-airlines.html
+
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^www.hoabinhairlines.vn [NC]
+    RewriteRule ^(.*)$ https://hoabinhairlines.vn/$1 [L,R=301]
+
+    RewriteCond %{HTTPS} !=on [NC]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# BEGIN GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
+# END GZIP
