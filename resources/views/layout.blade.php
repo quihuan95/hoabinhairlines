@@ -115,8 +115,15 @@
 <div class="wrapper22">
     <div class="boxlag">
         <div class="boxlagabs">
-           <a href="https://hoabinhairlines.vn/"><img style="height:15px;margin-right: 5px;width:23px;" src="{{ asset('Images/vietnam-flag.jpg') }}"></a>
-           <a href="https://hoabinhairlines.asia/" rel="nofollow"><img style="height:15px;width:23px;" src="{{ asset('Images/eflag.jpg') }}"></a>
+           <!-- <a href="https://hoabinhairlines.vn/"><img style="height:15px;margin-right: 5px;width:23px;" src="{{ asset('Images/vietnam-flag.jpg') }}"></a>
+           <a href="https://hoabinhairlines.asia/" rel="nofollow"><img style="height:15px;width:23px;" src="{{ asset('Images/eflag.jpg') }}"></a> -->
+           <div id="google_translate_element"></div>
+           <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en,vi,ru,zh-CN,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
          </div>
       </div>
     <!--@include('inc.banner2ben')-->

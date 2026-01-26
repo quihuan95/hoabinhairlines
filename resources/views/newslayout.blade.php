@@ -31,6 +31,7 @@
                     <div class="fl"><h1><a href="#">Mua vé máy bay giá rẻ trực tuyến hàng đầu Việt Nam</a></h1></div>
                     <div class="fr">
                         <ul class="list-menu-top list-inline">
+                            <li><div id="google_translate_element"></div></li>
                             <li>
                                 <a href="/gioi-thieu">Giới thiệu</a>
                             </li>
@@ -299,5 +300,11 @@
     @include('inc.footer')
 
     @include('inc.js')
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en,vi,ru,zh-CN,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

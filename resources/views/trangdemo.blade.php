@@ -727,7 +727,7 @@
 
                 <div class="booking-step step-hotline">
                     <div class="num-st">3.</div>
-                    Gọi điện thoại cho Hòa Bình Airlines
+                    Gọi điện thoại cho HoaBinh Airlines
                     <div class="mt10">
                         <b><i class="fa fa-phone fs20" aria-hidden="true"></i> Tổng đài: <a href="tel:0913311911"><span class="txt-orange">0913 311 911 </span></a></b>
                     </div>
@@ -738,7 +738,7 @@
 
                 <div class="booking-step">
                     <div class="num-st">4.</div>
-                    Đến trực tiếp văn phòng Hòa Bình Airlines
+                    Đến trực tiếp văn phòng HoaBinh Airlines
                     <div class="row mt10">
                         <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">
                             <p class="txt-orange"><b>Văn phòng tại Hà Nội</b></p>
@@ -775,7 +775,7 @@
                         </div>
                         <p>
                             <b>THANH TOÁN BẰNG TIỀN MẶT TẠI VĂN PHÒNG HÒA BÌNH AIRLINES</b><br>
-                            <span class="">Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng Hòa Bình Airlines để thanh toán và nhận vé.</span>
+                            <span class="">Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng HoaBinh Airlines để thanh toán và nhận vé.</span>
                         </p>
                         <div class="clr"></div>
                     </li>
@@ -786,7 +786,7 @@
                         </div>
                         <p>
                             <b>THANH TOÁN TẠI NHÀ</b><br>
-                            <span>Nhân viên Hòa Bình Airlines sẽ giao vé & thu tiền tại nhà theo địa chỉ Quý khách cung cấp.</span>
+                            <span>Nhân viên HoaBinh Airlines sẽ giao vé & thu tiền tại nhà theo địa chỉ Quý khách cung cấp.</span>
                         </p>
                         <div class="clr"></div>
                     </li>
@@ -840,7 +840,7 @@
 
                 <div class="clearfix"></div>
 
-                <div class="txt-89 fs20 txc">Đăng ký nhận tin khuyến mãi ngay để không bỏ lỡ các ưu đãi hấp dẫn mới nhất từ <b>Hòa Bình Airlines</b>!</div>
+                <div class="txt-89 fs20 txc">Đăng ký nhận tin khuyến mãi ngay để không bỏ lỡ các ưu đãi hấp dẫn mới nhất từ <b>HoaBinh Airlines</b>!</div>
 
                 <div class="form-email mt30 relative">
                     <form id="email_promotion111" role="form" action="{!! route('email.promotion') !!}" method="post">

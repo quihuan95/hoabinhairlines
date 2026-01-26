@@ -770,10 +770,17 @@
             </h3>
         <div class="booking-content p0">
             <div class="booking-step">
-                <div class="num-st">1.</div>Trực tiếp lên website, nhanh nhất - tiện nhất</div>
+                <div class="num-st">1.</div>Trực tiếp trên website, nhanh nhất - tiện nhất</div>
             <div class="booking-step step-hotline">
                 <div class="num-st">2.</div>Gọi điện thoại cho Hòa Bình Airlines
-                <div class="mt10"> <b><i class="fa fa-phone fs20" aria-hidden="true"></i> Tổng đài: <a rel="nofollow" href="tel:0913311911"><span class="txt-orange">0913 311 911 </span></a></b>
+                <div class="mt10"> 
+                    <b>
+                        <i class="fa fa-phone fs20" aria-hidden="true"></i> 
+                        Tổng đài: 
+                        <a rel="nofollow" href="tel:0913311911"><span class="txt-orange">0913 311 911 </span></a>
+                            - 
+                        <a rel="nofollow" href="tel:0939311911"><span class="txt-orange">0939 311 911</span></a>
+                    </b>
                 </div>
             </div>
             <div class="booking-step">
@@ -782,20 +789,20 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">
                         <p class="txt-orange"><b>Văn phòng tại Hà Nội</b>
                         </p>
-                        <p>29 Đoàn Thị Điểm, Quốc Tử Giám, Đống Đa, HN</p>
-                        <p>Tel:+84.939.311.911</p>
+                        <p>29 Đoàn Thị Điểm, Ô Chợ Dừa, Hà Nội</p>
+                        <p>Tel: 0939 311 911 - 0913 311 911</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">
                         <p class="txt-orange"><b>Văn phòng tại Đà Nẵng</b>
                         </p>
                         <p>217 Trần Phú, Hải Châu, Đà Nẵng</p>
-                        <p>Tel:+84.913.341.911</p>
+                        <p>Tel: 0913 929 182 - 0918 640 988</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">
                         <p class="txt-orange"><b>Văn phòng tại Sài gòn</b>
                         </p>
-                        <p>5 Hoa Cau, Phú Nhuận, TP.Hồ Chí Minh</p>
-                        <p>Tel:+84.967.789.121</p>
+                        <p>05 Hoa Cau, Cầu Kiệu, TP.HCM</p>
+                        <p>Tel: 0913 199 866 - 0913 341 911</p>
                     </div>
                 </div>
             </div>
@@ -864,7 +871,7 @@
 
                 <div class="clearfix"></div>
 
-                <div class="txt-89 fs20 txc">Đăng ký nhận tin khuyến mãi ngay để không bỏ lỡ các ưu đãi hấp dẫn mới nhất từ <b>Hòa Bình Airlines</b>!</div>
+                <div class="txt-89 fs20 txc">Đăng ký nhận tin khuyến mãi ngay để không bỏ lỡ các ưu đãi hấp dẫn mới nhất từ <b>HoaBinh Airlines</b>!</div>
 
                 <div class="form-email mt30 relative">
                     <form id="email_promotion111" role="form" action="{!! route('email.promotion') !!}" method="post">

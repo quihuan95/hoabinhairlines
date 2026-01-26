@@ -379,8 +379,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </style>
   <div class="boxlag">
     <div class="boxlagabs">
-       <a aria-label="Link to HoabinhAirlines.vn" href="https://hoabinhairlines.vn/"><img alt="vietnam" width="23px" height="15px" style="margin-right: 5px;" src="https://hoabinhairlines.vn/Images/vietnam-flag.jpg"></a>
-       <a aria-label="Link to HoabinhAirlines.asia" href="https://hoabinhairlines.asia/" rel="nofollow"><img alt="english" width="23px" height="15px" src="https://hoabinhairlines.vn/Images/eflag.jpg"></a>
+       <!-- <a aria-label="Link to HoabinhAirlines.vn" href="https://hoabinhairlines.vn/"><img alt="vietnam" width="23px" height="15px" style="margin-right: 5px;" src="https://hoabinhairlines.vn/Images/vietnam-flag.jpg"></a>
+       <a aria-label="Link to HoabinhAirlines.asia" href="https://hoabinhairlines.asia/" rel="nofollow"><img alt="english" width="23px" height="15px" src="https://hoabinhairlines.vn/Images/eflag.jpg"></a> -->
+       <div id="google_translate_element"></div>
+       <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en,vi,ru,zh-CN,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
      </div>
   </div>
 @include('inc.banner2ben')

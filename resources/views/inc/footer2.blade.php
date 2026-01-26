@@ -45,14 +45,8 @@
                         class="fa fa-angle-right mr5" aria-hidden="true"></i> Hình thức thanh toán</a></li>
                   <li><a href="{{ URL::to('pages/quy-che-hoat-dong-san-tmdt') }}" rel="nofollow"><i
                         class="fa fa-angle-right mr5" aria-hidden="true"></i> Quy chế hoạt động sàn TMĐT</a></li>
-                  <li><label style="font-size: 18px;margin-top:15px;">Đối tác của chúng tôi</label><br />
-                    <a target="_blank" href="https://hcmcevents.com">HCMC EVENTS</a>
-                  </li>
-                  <li><a style="font-size: 18px;margin-top:15px;font-weight:bold" target="_blank"
-                      href="https://profile.hoabinhairlines.vn">
-                      Hồ sơ năng lực của chúng tôi
-                    </a>
-                  </li>
+                  <li><a href="https://profile.hoabinhairlines.vn" rel="nofollow"><i
+                        class="fa fa-angle-right mr5" aria-hidden="true"></i> Hồ sơ năng lực của chúng tôi</a></li>
                 </ul>
               </div>
               <div class="ft-content-item" style="width: 220px;">
@@ -144,46 +138,47 @@
               <div class="row m0mb">
                 <div class="border-page-footer">
                   <div class="row">
-                    <div class="office-box col-md-4 npl col-first">
+                    <div class="office-box col-md-4 npl col-first" style="padding: 0 10px">
                       <h2 style="margin-bottom: 20px;margin-top: 0px;">
                         <span class="hbg icon-hanoi"></span>
                       </h2>
                       <div class="f11a1">
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-location"></span>29 Đoàn Thị Điểm, phường Ô
                           Chợ Dừa, Thành phố Hà Nội, Việt Nam
                         </div>
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
-                          <a class="click2call" href="tel:+84918640988">(+84)918.640.988</a>
+                          <a class="click2call" href="tel:0939311911">0939 311 911</a> - 
+                          <a class="click2call" href="tel:0913311911">0913 311 911</a>
                         </div>
                       </div>
                     </div>
-                    <div class="office-box col-md-4">
+                    <div class="office-box col-md-4" style="padding: 0 10px">
                       <h2 style="margin-bottom: 20px;margin-top: 0px;">
                         <span class="hbg icon-danang"></span>
                       </h2>
                       <div class="f11a1">
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-location"></span>Số 217 Trần Phú, Phường Hải Châu, Thành phố Đà Nẵng,
                           Việt Nam
                         </div>
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-mail"></span>
                           <a class="click2call" href="mailto:info@hoabinh-group.com">info@hoabinh-group.com</a>
                         </div>
                       </div>
                     </div>
-                    <div class="office-box col-md-4">
+                    <div class="office-box col-md-4" style="padding: 0 10px">
                       <h2 style="margin-bottom: 20px;margin-top: 0px;">
                         <span class="hbg icon-hcm"></span>
                       </h2>
                       <div class="f11a1">
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-location"></span>Số 05 Hoa Cau, Phường Cầu Kiệu, Thành phố Hồ Chí Minh,
                           Việt Nam
                         </div>
-                        <div class="at1">
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-web"></span>
                           <a class="click2call" href="https://hoabinh-group.com">www.hoabinh-group.com</a>
                         </div>
@@ -210,9 +205,9 @@
 
         <div class="txt-addr txc-xs txt-copyright">
           <p style="text-align:center;">Email: <a rel="nofollow"
-              href="mailto:info@hoabinhtourist.com">info@hoabinhtourist.com</a> | <a rel="nofollow"
+              href="mailto:info@hoabinh-group.com">info@hoabinh-group.com</a> | <a rel="nofollow"
               href="mailto:lan.pham@hoabinh-group.com">lan.pham@hoabinh-group.com</a> - Phản ánh dịch vụ: <a
-              rel="nofollow" href="tel:0918640988">0918 640 988</a></p>
+              rel="nofollow" href="tel:0913311911">0913 311 911</a></p>
           <p style="text-align:center;"><a href="https://hoabinhairlines.vn/sitemap.xml" rel="dofollow"
               target="_blank">Sitemap website</a></p>
         </div>
