@@ -418,11 +418,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <!-- Nút cờ của bạn -->
        <div class="lang-switch">
          <button type="button" class="lang-btn" data-lang="vi" aria-label="Tiếng Việt">
-           <img src="{{ asset('images/flags/vi.svg') }}" alt="VI" />
+           <img src="https://flagcdn.com/w40/vn.png" alt="VI" />
          </button>
 
          <button type="button" class="lang-btn" data-lang="en" aria-label="English">
-           <img src="{{ asset('images/flags/en.svg') }}" alt="EN" />
+           <img src="https://flagcdn.com/w40/gb.png" alt="EN" />
          </button>
        </div>
      </div>
