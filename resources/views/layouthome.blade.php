@@ -376,18 +376,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <style type="text/css">
     .boxlag { float: right;width: 100%;height: auto;position: relative; }
     .boxlagabs { float: right;position: absolute;right: 0px;top: 2px;z-index: 99999999999; }
+    
+    /* Google Translate Custom UI */
+    .lang-switch{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .lang-btn{
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.12);
+      background:#fff;
+      padding:0;
+      cursor:pointer;
+      overflow:hidden;
+      display:grid;
+      place-items:center;
+      transition:.2s;
+    }
+
+    .lang-btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+
+    .lang-btn img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
   </style>
   <div class="boxlag">
     <div class="boxlagabs">
-       <!-- <a aria-label="Link to HoabinhAirlines.vn" href="https://hoabinhairlines.vn/"><img alt="vietnam" width="23px" height="15px" style="margin-right: 5px;" src="https://hoabinhairlines.vn/Images/vietnam-flag.jpg"></a>
-       <a aria-label="Link to HoabinhAirlines.asia" href="https://hoabinhairlines.asia/" rel="nofollow"><img alt="english" width="23px" height="15px" src="https://hoabinhairlines.vn/Images/eflag.jpg"></a> -->
-       <div id="google_translate_element"></div>
-       <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en,vi,ru,zh-CN,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-        </script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+       <!-- Google Translate (ẩn đi nhưng vẫn phải tồn tại) -->
+       <div id="google_translate_element" style="display:none;"></div>
+
+       <!-- Nút cờ của bạn -->
+       <div class="lang-switch">
+         <button type="button" class="lang-btn" data-lang="vi" aria-label="Tiếng Việt">
+           <img src="{{ asset('images/flags/vi.svg') }}" alt="VI" />
+         </button>
+
+         <button type="button" class="lang-btn" data-lang="en" aria-label="English">
+           <img src="{{ asset('images/flags/en.svg') }}" alt="EN" />
+         </button>
+       </div>
      </div>
   </div>
 @include('inc.banner2ben')
@@ -533,6 +570,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script src="{{asset('public/frontend/js/jquery.slickmodal.min.js')}}"></script> 
       <div class="smoothBanner" data-sm-init="true"> <a rel="nofollow" href="/"> <img style="width: 100%" src="https://hoabinhairlines.vn/public/frontend/css/images/pop%20up%20website-04.png"> </a> </div>
 <script> $('.smoothBanner').SlickModals({ popup_type: 'delayed', popup_delayedTime: '0s', popup_animation: 'zoomOut', popup_autoClose : true,  popup_autoCloseAfter : '10s', popup_css: { 'width': '600px', 'height': 'auto', 'background': 'transparent', 'padding': '0', 'margin': 'auto', 'top': '-200px','animation-duration': '1s' }, overlay_css: { 'background': 'rgba(0, 0, 0, 0.6)' }, mobile_show: true, mobile_breakpoint: '540px', mobile_position: 'center', mobile_css: { 'width': '94%', 'background': 'transparent', 'padding': '0', 'margin': '0','left': '-15px', 'animation-duration': '1s' } }); </script>-->
+    
+    <!-- Google Translate Custom Script -->
+    <script>
+      // Hàm init của Google
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: 'vi',          // ngôn ngữ gốc trang
+            includedLanguages: 'vi,en',  // bạn muốn hỗ trợ gì thì thêm vào đây: vi,en,ja,ko...
+            autoDisplay: false
+          },
+          'google_translate_element'
+        );
+      }
+
+      // Set cookie để Google Translate biết bạn muốn ngôn ngữ nào
+      function setTranslateLang(lang) {
+        // format cookie: /<from>/<to>
+        const from = 'vi';
+        const value = `/${from}/${lang}`;
+        document.cookie = `googtrans=${value};path=/`;
+        document.cookie = `googtrans=${value};path=/;domain=${location.hostname}`;
+
+        // reload để widget áp dụng dịch
+        location.reload();
+      }
+
+      // Gắn event cho button cờ
+      document.addEventListener('click', function(e){
+        const btn = e.target.closest('.lang-btn');
+        if(!btn) return;
+        const lang = btn.getAttribute('data-lang');
+        setTranslateLang(lang);
+      });
+    </script>
+
+    <!-- Script Google Translate -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 
