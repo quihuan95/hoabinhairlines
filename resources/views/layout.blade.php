@@ -54,6 +54,39 @@
     <style type="text/css">
         .boxlag { float: right;width: 100%;height: auto;position: relative; }
         .boxlagabs { float: right;position: absolute;right: 0px;top: 2px;z-index: 99999999999; }
+        
+        /* Google Translate Custom UI */
+        .lang-switch{
+          display:flex;
+          gap:10px;
+          align-items:center;
+        }
+
+        .lang-btn{
+          width:42px;
+          height:42px;
+          border-radius:999px;
+          border:1px solid rgba(0,0,0,.12);
+          background:#fff;
+          padding:0;
+          cursor:pointer;
+          overflow:hidden;
+          display:grid;
+          place-items:center;
+          transition:.2s;
+        }
+
+        .lang-btn:hover{
+          transform: translateY(-1px);
+          box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .lang-btn img{
+          width:100%;
+          height:100%;
+          object-fit:cover;
+          display:block;
+        }
       </style>
 
     <!-- Google Tag Manager (noscript) -->
@@ -115,15 +148,19 @@
 <div class="wrapper22">
     <div class="boxlag">
         <div class="boxlagabs">
-           <!-- <a href="https://hoabinhairlines.vn/"><img style="height:15px;margin-right: 5px;width:23px;" src="{{ asset('Images/vietnam-flag.jpg') }}"></a>
-           <a href="https://hoabinhairlines.asia/" rel="nofollow"><img style="height:15px;width:23px;" src="{{ asset('Images/eflag.jpg') }}"></a> -->
-           <div id="google_translate_element"></div>
-           <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({pageLanguage: 'vi', includedLanguages: 'en,vi,ru,zh-CN,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-            }
-            </script>
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+           <!-- Google Translate (ẩn đi nhưng vẫn phải tồn tại) -->
+           <div id="google_translate_element" style="display:none;"></div>
+
+           <!-- Nút cờ của bạn -->
+           <div class="lang-switch">
+             <button type="button" class="lang-btn" data-lang="vi" aria-label="Tiếng Việt">
+               <img src="{{ asset('images/flags/vi.svg') }}" alt="VI" />
+             </button>
+
+             <button type="button" class="lang-btn" data-lang="en" aria-label="English">
+               <img src="{{ asset('images/flags/en.svg') }}" alt="EN" />
+             </button>
+           </div>
          </div>
       </div>
     <!--@include('inc.banner2ben')-->
@@ -254,6 +291,44 @@
                 });
             </script>
             -->
+        
+        <!-- Google Translate Custom Script -->
+        <script>
+          // Hàm init của Google
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              {
+                pageLanguage: 'vi',          // ngôn ngữ gốc trang
+                includedLanguages: 'vi,en',  // bạn muốn hỗ trợ gì thì thêm vào đây: vi,en,ja,ko...
+                autoDisplay: false
+              },
+              'google_translate_element'
+            );
+          }
+
+          // Set cookie để Google Translate biết bạn muốn ngôn ngữ nào
+          function setTranslateLang(lang) {
+            // format cookie: /<from>/<to>
+            const from = 'vi';
+            const value = `/${from}/${lang}`;
+            document.cookie = `googtrans=${value};path=/`;
+            document.cookie = `googtrans=${value};path=/;domain=${location.hostname}`;
+
+            // reload để widget áp dụng dịch
+            location.reload();
+          }
+
+          // Gắn event cho button cờ
+          document.addEventListener('click', function(e){
+            const btn = e.target.closest('.lang-btn');
+            if(!btn) return;
+            const lang = btn.getAttribute('data-lang');
+            setTranslateLang(lang);
+          });
+        </script>
+
+        <!-- Script Google Translate -->
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             
 </body>
 </html>
