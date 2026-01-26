@@ -27,6 +27,7 @@
           display:flex;
           gap:10px;
           align-items:center;
+          position: absolute;
         }
 
         .lang-btn{
