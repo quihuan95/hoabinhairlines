@@ -382,6 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       display:flex;
       gap:10px;
       align-items:center;
+      position: absolute;
     }
 
     .lang-btn{
