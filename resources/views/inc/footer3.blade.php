@@ -141,6 +141,8 @@
 
 				<hr />
 
+				@include('inc.footer-license-pdf')
+
 				<div class="row m0">
 					<div class="">
 						<div class="col-xs-12 col-sm-12 col-md-12 p0">
