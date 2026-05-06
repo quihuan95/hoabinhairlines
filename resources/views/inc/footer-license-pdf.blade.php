@@ -275,7 +275,7 @@
     }
 </style>
 
-<div class="col-md-12 col-sm-12 copyright" style="margin-left: 0px !important; margin-right: 0px !important;">
+<div class="col-md-12 col-sm-12 copyright" style="padding-left: 0px !important; padding-right: 0px !important;">
     <div class="footer-license-wrap">
         <div class="license-cards">
             <button type="button" class="license-card license-card--pdf"
