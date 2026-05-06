@@ -92,7 +92,7 @@
                   top: -90px;
                   right: -130px;
                   text-align: right;
-                  z-index: 999999;
+                  /* z-index: 999999; */
                 }
 
                 .w320 {
