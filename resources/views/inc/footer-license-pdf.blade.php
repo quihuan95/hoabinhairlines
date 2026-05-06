@@ -1,12 +1,6 @@
-@php
-    // Dedicated footer UI for showing business/license PDFs in a modal.
-    // Keep it self-contained so it can be reused across projects.
-    $buildUri = asset('public/assets/build/library');
-@endphp
-
 <style>
     .footer-license-wrap {
-        max-width: 1140px;
+        max-width: 100%;
         margin: 0 auto;
         padding: 0px;
         border-top: 1px solid #e9e9e9;
@@ -283,24 +277,6 @@
 
 <div class="col-md-12 col-sm-12 copyright">
     <div class="footer-license-wrap">
-        <!-- <ul class="bottom_links">
-            <li>
-                <img width="90" height="60" src="<?php echo $buildUri; ?>/images/PATA%20Member%20Logo%20H.jpeg">
-            </li>
-            <li>
-                <img width="70" height="30" src="<?php echo $buildUri; ?>/images/japan-circle.jpeg">
-            </li>
-            <li>
-                <img width="70" height="30" src="<?php echo $buildUri; ?>/images/hanoi_vnesco_travel.png">
-            </li>
-            <li>
-                <img width="70" height="30" src="<?php echo $buildUri; ?>/images/vcci.png">
-            </li>
-            <li>
-                <img width="70" height="30" src="<?php echo $buildUri; ?>/images/VISTA2015.png">
-            </li>
-        </ul> -->
-
         <div class="license-cards">
             <button type="button" class="license-card license-card--pdf"
                 data-pdf="https://cdn.hoabinhevents.com/profiles/GI%E1%BA%A4Y%20PH%C3%89P%20KDDV%20L%E1%BB%AE%20H%C3%80NH%20QT%20H%C3%92A%20B%C3%8CNH%20L%E1%BA%A6N%204.pdf"

@@ -45,8 +45,8 @@
                         class="fa fa-angle-right mr5" aria-hidden="true"></i> Hình thức thanh toán</a></li>
                   <li><a href="{{ URL::to('pages/quy-che-hoat-dong-san-tmdt') }}" rel="nofollow"><i
                         class="fa fa-angle-right mr5" aria-hidden="true"></i> Quy chế hoạt động sàn TMĐT</a></li>
-                  <li><a href="https://profile.hoabinhairlines.vn" rel="nofollow"><i
-                        class="fa fa-angle-right mr5" aria-hidden="true"></i> Hồ sơ năng lực của chúng tôi</a></li>
+                  <li><a href="https://profile.hoabinhairlines.vn" rel="nofollow"><i class="fa fa-angle-right mr5"
+                        aria-hidden="true"></i> Hồ sơ năng lực của chúng tôi</a></li>
                 </ul>
               </div>
               <div class="ft-content-item" style="width: 220px;">
@@ -132,6 +132,8 @@
 
         <hr />
 
+        @include('inc.footer-license-pdf')
+
         <div class="row m0">
           <div class="">
             <div class="col-xs-12 col-sm-12 col-md-12 p0">
@@ -149,7 +151,7 @@
                         </div>
                         <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
-                          <a class="click2call" href="tel:0939311911">0939 311 911</a> - 
+                          <a class="click2call" href="tel:0939311911">0939 311 911</a> -
                           <a class="click2call" href="tel:0913311911">0913 311 911</a>
                         </div>
                       </div>
@@ -231,8 +233,8 @@
               <li>
                 <a rel="nofollow" href="/"><i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a>
               </li>
-              <?php $menu_mobile=App\Models\Menus::render_menu_mobile();
-                            echo $menu_mobile;
+              <?php $menu_mobile = App\Models\Menus::render_menu_mobile();
+echo $menu_mobile;
                         ?>
             </ul>
 
