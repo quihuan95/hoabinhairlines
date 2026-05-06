@@ -80,6 +80,7 @@
         font-size: 16px;
         line-height: 1.2;
         margin-bottom: 4px;
+        color: #ffffff;
     }
 
     .license-content p {
