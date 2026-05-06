@@ -117,25 +117,27 @@
         inset: 0;
         z-index: 100000;
         display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
+    }
+
+    .pdf-modal__backdrop {
+        position: absolute;
+        inset: 0;
         background: rgba(0, 0, 0, 0.55);
     }
 
-    .pdf-modal.is-open {
-        display: flex;
-    }
-
     .pdf-modal__dialog {
-        width: min(980px, 96vw);
-        height: min(760px, 86vh);
+        width: min(980px, calc(100% - 30px));
+        height: calc(100vh - 80px);
         background: #fff;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
         display: flex;
         flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .pdf-modal__header {
@@ -177,19 +179,21 @@
         font-size: 16px;
         font-weight: 700;
         margin: 0;
-        color: #ffffff;
+        color: #1f2b3d;
     }
 
     .pdf-modal__close {
         width: 36px;
         height: 36px;
         border-radius: 10px;
-        border: 1px solid #e6e6e6;
-        background: #fff;
+        border: 0;
+        background: transparent;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        font-size: 34px;
+        line-height: 1;
     }
 
     .pdf-modal__close:focus-visible {
@@ -269,9 +273,10 @@
         }
 
         .pdf-modal__dialog {
-            width: 96vw;
-            height: 86vh;
+            width: calc(100% - 20px);
+            height: calc(100vh - 30px);
             border-radius: 10px;
+            top: 15px;
         }
     }
 </style>
@@ -314,6 +319,7 @@
 
         <div class="pdf-modal" id="licensePdfModal" role="dialog" aria-modal="true" aria-hidden="true"
             aria-label="Xem giấy phép">
+            <div class="pdf-modal__backdrop" id="licensePdfBackdrop"></div>
             <div class="pdf-modal__dialog" role="document">
                 <div class="pdf-modal__header">
                     <p class="pdf-modal__title" id="licensePdfTitle">Xem giấy phép</p>
@@ -327,10 +333,7 @@
                             Tải xuống
                         </a>
                         <button type="button" class="pdf-modal__close" id="licensePdfClose" aria-label="Đóng">
-                            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-                                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.6"
-                                    stroke-linecap="round" />
-                            </svg>
+                            &times;
                         </button>
                     </div>
                 </div>
@@ -338,7 +341,6 @@
                     <iframe class="pdf-modal__iframe" id="licensePdfFrame" title="PDF viewer" loading="lazy"></iframe>
                 </div>
             </div>
-            <br />
         </div>
     </div>
 </div>
@@ -349,6 +351,7 @@
         var pdfFrame = document.querySelector("#licensePdfFrame");
         var pdfTitle = document.querySelector("#licensePdfTitle");
         var pdfClose = document.querySelector("#licensePdfClose");
+        var pdfBackdrop = document.querySelector("#licensePdfBackdrop");
         var pdfDownload = document.querySelector("#licensePdfDownload");
         var pdfTriggers = document.querySelectorAll(".license-card--pdf");
 
@@ -372,7 +375,7 @@
             if (pdfDownload) {
                 pdfDownload.href = url;
             }
-            pdfModal.classList.add("is-open");
+            pdfModal.style.display = "block";
             pdfModal.setAttribute("aria-hidden", "false");
             document.body.style.overflow = "hidden";
             if (pdfClose) {
@@ -384,7 +387,7 @@
             if (!pdfModal || !pdfFrame) {
                 return;
             }
-            pdfModal.classList.remove("is-open");
+            pdfModal.style.display = "none";
             pdfModal.setAttribute("aria-hidden", "true");
             pdfFrame.src = "";
             document.body.style.overflow = "";
@@ -404,14 +407,12 @@
             pdfClose.addEventListener("click", closePdfModal);
         }
 
-        pdfModal.addEventListener("click", function(e) {
-            if (e.target === pdfModal) {
-                closePdfModal();
-            }
-        });
+        if (pdfBackdrop) {
+            pdfBackdrop.addEventListener("click", closePdfModal);
+        }
 
         document.addEventListener("keydown", function(e) {
-            if (e.key === "Escape" && pdfModal.classList.contains("is-open")) {
+            if (e.key === "Escape" && pdfModal.style.display === "block") {
                 closePdfModal();
             }
         });
