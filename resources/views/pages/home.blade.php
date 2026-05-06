@@ -705,6 +705,16 @@
                                                     aria-hidden="true"></i></span>
                                         </span>
                                     </a>
+                                    <a class="certificate-item js-certificate-trigger" href="javascript:void(0);"
+                                        data-pdf-url="https://cdn.hoabinhevents.com/profiles/ISO.pdf"
+                                        data-title="Chứng nhận ISO 9001:2015">
+                                        <span class="certificate-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+                                        <span class="certificate-content">
+                                            <strong>Chứng nhận ISO 9001:2015</strong>
+                                            <span class="certificate-action">Xem chi tiết <i class="fa fa-long-arrow-right"
+                                                    aria-hidden="true"></i></span>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
