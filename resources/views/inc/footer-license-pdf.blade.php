@@ -71,7 +71,7 @@
         align-items: center;
         justify-content: center;
         font-size: 28px;
-        color: #334f73;
+        color: #ffffff;
         flex-shrink: 0;
     }
 
@@ -91,14 +91,14 @@
     .license-more {
         font-size: 14px;
         font-weight: 600;
-        color: #2f4a6f;
+        color: #ffffff;
     }
 
     .footer-copyright-center {
         text-align: center;
         padding-top: 14px;
         font-size: 16px;
-        color: #233246;
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -176,7 +176,7 @@
         font-size: 16px;
         font-weight: 700;
         margin: 0;
-        color: #1f2b3d;
+        color: #ffffff;
     }
 
     .pdf-modal__close {

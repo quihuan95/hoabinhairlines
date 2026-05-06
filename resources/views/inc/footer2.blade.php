@@ -127,9 +127,6 @@
 
           </div>
         </div>
-
-        <div class="clearfix"></div>
-
         <hr />
 
         @include('inc.footer-license-pdf')
