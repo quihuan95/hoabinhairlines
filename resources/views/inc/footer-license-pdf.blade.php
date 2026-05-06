@@ -1,6 +1,6 @@
 <style>
     .footer-license-wrap {
-        max-width: 100%;
+        max-width: 1140px;
         margin: 0 auto;
         padding: 0px;
         border-top: 1px solid #e9e9e9;
@@ -71,7 +71,7 @@
         align-items: center;
         justify-content: center;
         font-size: 28px;
-        color: #ffffff;
+        color: #334f73;
         flex-shrink: 0;
     }
 
@@ -80,7 +80,6 @@
         font-size: 16px;
         line-height: 1.2;
         margin-bottom: 4px;
-        color: #ffffff;
     }
 
     .license-content p {
@@ -92,14 +91,14 @@
     .license-more {
         font-size: 14px;
         font-weight: 600;
-        color: #ffffff;
+        color: #2f4a6f;
     }
 
     .footer-copyright-center {
         text-align: center;
         padding-top: 14px;
         font-size: 16px;
-        color: #ffffff;
+        color: #233246;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -117,27 +116,25 @@
         inset: 0;
         z-index: 100000;
         display: none;
-    }
-
-    .pdf-modal__backdrop {
-        position: absolute;
-        inset: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
         background: rgba(0, 0, 0, 0.55);
     }
 
+    .pdf-modal.is-open {
+        display: flex;
+    }
+
     .pdf-modal__dialog {
-        width: min(980px, calc(100% - 30px));
-        height: calc(100vh - 80px);
+        width: min(980px, 96vw);
+        height: min(760px, 86vh);
         background: #fff;
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .pdf-modal__header {
@@ -186,14 +183,12 @@
         width: 36px;
         height: 36px;
         border-radius: 10px;
-        border: 0;
-        background: transparent;
+        border: 1px solid #e6e6e6;
+        background: #fff;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 34px;
-        line-height: 1;
     }
 
     .pdf-modal__close:focus-visible {
@@ -273,15 +268,15 @@
         }
 
         .pdf-modal__dialog {
-            width: calc(100% - 20px);
-            height: calc(100vh - 30px);
+            width: 96vw;
+            height: 86vh;
             border-radius: 10px;
-            top: 15px;
         }
     }
 </style>
 
-<div class="col-md-12 col-sm-12 copyright" style="padding-left: 0px !important; padding-right: 0px !important; margin-top: 30px;">
+<div class="col-md-12 col-sm-12 copyright"
+    style="padding-left: 0px !important; padding-right: 0px !important; margin-top: 30px;">
     <div class="footer-license-wrap">
         <div class="license-cards">
             <button type="button" class="license-card js-certificate-trigger"

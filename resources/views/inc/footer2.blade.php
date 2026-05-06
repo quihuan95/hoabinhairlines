@@ -129,7 +129,7 @@
         </div>
         <hr />
 
-        @include('inc.footer-license-pdf')
+        <div class="clearfix"></div>
 
         <div class="row m0">
           <div class="">
@@ -240,7 +240,7 @@ echo $menu_mobile;
         </div>
       </div>
     </div>
-
+    @include('inc.footer-license-pdf')
   </div>
 </div>
 
