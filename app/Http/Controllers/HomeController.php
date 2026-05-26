@@ -1013,25 +1013,34 @@ class HomeController extends Controller
             'tel' => 'required|string|min:10|max:11',
             'email' => 'nullable|email|max:255',
             'so_luong_ve' => 'required|integer|min:1|max:99',
-            'chieu_di' => 'required|string|max:255',
-            'chieu_ve' => 'required|string|max:255',
+            'chieu_di' => 'nullable|string|max:255',
+            'chieu_ve' => 'nullable|string|max:255',
         ]);
+
+        $chieuDi = trim((string) $request->input('chieu_di', ''));
+        $chieuVe = trim((string) $request->input('chieu_ve', ''));
 
         $row = [
             'fullname' => $request->name,
             'phone' => $request->tel,
             'email' => $request->email ?: '',
             'num' => (string) $request->so_luong_ve,
-            'date' => $request->chieu_di,
             'types' => '4',
             'status' => 'A',
             'create_at' => Carbon::now(),
         ];
 
         if (Schema::hasColumn('contacts', 'address')) {
-            $row['address'] = $request->chieu_ve;
+            $row['date'] = $chieuDi;
+            $row['address'] = $chieuVe;
+        } elseif ($chieuDi !== '' && $chieuVe !== '') {
+            $row['date'] = $chieuDi.' → '.$chieuVe;
+        } elseif ($chieuDi !== '') {
+            $row['date'] = $chieuDi;
+        } elseif ($chieuVe !== '') {
+            $row['date'] = $chieuVe;
         } else {
-            $row['date'] = $request->chieu_di . ' → ' . $request->chieu_ve;
+            $row['date'] = '';
         }
 
         DB::table('contacts')->insert($row);

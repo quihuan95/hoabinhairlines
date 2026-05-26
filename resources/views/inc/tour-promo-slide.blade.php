@@ -273,13 +273,13 @@
                         placeholder="1" inputmode="numeric">
                 </div>
                 <div class="tour-promo-slide__field">
-                    <label for="tour_promo_chieu_di">Chiều đi <span aria-hidden="true">*</span></label>
-                    <input type="text" id="tour_promo_chieu_di" name="chieu_di" required maxlength="255"
+                    <label for="tour_promo_chieu_di">Chiều đi</label>
+                    <input type="text" id="tour_promo_chieu_di" name="chieu_di" maxlength="255"
                         placeholder="VD: Hà Nội - TP. Hồ Chí Minh">
                 </div>
                 <div class="tour-promo-slide__field">
-                    <label for="tour_promo_chieu_ve">Chiều về <span aria-hidden="true">*</span></label>
-                    <input type="text" id="tour_promo_chieu_ve" name="chieu_ve" required maxlength="255"
+                    <label for="tour_promo_chieu_ve">Chiều về</label>
+                    <input type="text" id="tour_promo_chieu_ve" name="chieu_ve" maxlength="255"
                         placeholder="VD: TP. Hồ Chí Minh - Hà Nội">
                 </div>
                 <button type="submit" class="tour-promo-slide__submit" id="tourPromoSlideSubmit">Đăng ký nhận tư
