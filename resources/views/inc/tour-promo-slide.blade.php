@@ -412,7 +412,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(openSlide, 800);
+            setTimeout(openSlide, 5000);
         });
     })();
 </script>
