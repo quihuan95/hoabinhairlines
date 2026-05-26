@@ -462,8 +462,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 0939 311 911</a>
                             </div>
                             <div>
-                               <a rel="nofollow" class="txt-hotline" href="tel:0918640988">
-                                0918 640 988</a> 
+                               <a rel="nofollow" class="txt-hotline" href="tel:0913311911">
+                                0913 311 911</a> 
                             </div>
                         </div>
                     </div>
@@ -476,8 +476,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </nav>            <div class="menu-header row m0 hidden-xs hidden-sm">
             <ul class="list-menu nav navbar-nav">
                 <?php
-                $menutop=App\Models\Menus::render_menu();
-                echo $menutop;
+$menutop = App\Models\Menus::render_menu();
+echo $menutop;
                 ?>
             </ul>
         </div>        </div>
