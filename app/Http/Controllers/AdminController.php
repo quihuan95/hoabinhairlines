@@ -29,6 +29,26 @@ class AdminController extends Controller
         return view('admin.payments.list',compact('list'));
     }
 
+    /**
+     * Đăng ký từ popup khuyến mãi HBA (bảng contacts, types = 4).
+     */
+    public function tour_promo_popup_list()
+    {
+        $records = DB::table('contacts')->where('types', '4')->orderBy('id', 'desc')->get();
+        return view('admin.tour_promo_popup.list', compact('records'));
+    }
+
+    public function tour_promo_popup_delete($id)
+    {
+        $deleted = DB::table('contacts')->where('types', '4')->where('id', $id)->delete();
+        if ($deleted) {
+            Session::put('message', 'Đã xóa bản đăng ký.');
+        } else {
+            Session::put('message', 'Không tìm thấy bản ghi hoặc không thể xóa.');
+        }
+        return Redirect::route('admin.tour_promo_popup.list');
+    }
+
     public function dashboard(Request $request){
         $admin_email=$request->username;
         $admin_password=md5($request->password);

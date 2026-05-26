@@ -75,6 +75,9 @@
         <li>
             <a href="{{ route('admin.email.list') }}"><i class="fa fa-envelope"></i> Email nhận tin khuyến mãi </a>
         </li>
+        <li>
+            <a href="{{ route('admin.tour_promo_popup.list') }}"><i class="fa fa-window-maximize"></i> Đăng ký popup HBA </a>
+        </li>
         <!--
         <li>
             <a href="{{URL::to('/admin/user')}}"><i class="fa fa-user"></i> Quản lý người dùng </a>

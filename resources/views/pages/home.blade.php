@@ -597,13 +597,45 @@
 
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 p0 pl10 pl0xs mt15xs hidden-xs hidden-sm">
+                <style>
+                    /* Khung slider: global style.css đặt .box-content-slider { max-height: 300px } */
+                    .box-content-slider {
+                        width: 100%;
+                        max-height: none !important;
+                        aspect-ratio: 4 / 3;
+                        overflow: hidden;
+                        margin-bottom: 15px;
+                    }
+
+                    .box-content-slider .filtering,
+                    .box-content-slider .filtering .slick-list,
+                    .box-content-slider .filtering .slick-track,
+                    .box-content-slider .filtering .slick-slide,
+                    .box-content-slider .filtering .slick-slide > div {
+                        height: 100%;
+                    }
+
+                    .box-content-slider .wap-ss-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .box-content-slider .wap-ss-img img {
+                        width: 100%;
+                        height: 100%;
+                        max-height: none;
+                        object-fit: contain;
+                        object-position: center;
+                        display: block;
+                    }
+                </style>
                 <div class="box-content-slider">
                     <div class="row filtering">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div class="wap-items-ss brbox">
                                     <div class="wap-ss-img">
-                                        <img src="https://hoabinhairlines.vn/public/uploads/banner/VietnamAirlines80.jpg"
+                                        <img src="{{ asset('public/frontend/css/images/banner sản phẩm slide 1.png') }}"
                                             alt="Hòa Bình Airlines" width="100%">
                                     </div>
                                 </div>
@@ -613,28 +645,8 @@
                             <div class="row">
                                 <div class="wap-items-ss brbox">
                                     <div class="wap-ss-img">
-                                        <img src="https://hoabinhairlines.vn/public/uploads/banner/Sieu May Bay94.jpg"
+                                        <img src="{{ asset('public/frontend/css/images/banner sản phẩm slide 2.png') }}"
                                             alt="Từ 28-03-2021 bay hoàn toàn bằng siêu máy bay" width="100%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="wap-items-ss brbox">
-                                    <div class="wap-ss-img">
-                                        <img src="https://hoabinhairlines.vn/public/uploads/banner/VNairline 2109689.jpg"
-                                            alt="Hòa Bình Airlines" width="100%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="wap-items-ss brbox">
-                                    <div class="wap-ss-img">
-                                        <img src="https://hoabinhairlines.vn/public/uploads/banner/Uu-dai-danh-cho-khach-le67.jpg"
-                                            alt="Ưu đãi dành cho khách lẻ" width="100%">
                                     </div>
                                 </div>
                             </div>

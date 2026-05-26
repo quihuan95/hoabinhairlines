@@ -23,6 +23,7 @@ Route::get('/ve-vietjetair', 'HomeController@ve_vietjetair');
 Route::get('/ve-bamboo-airways', 'HomeController@ve_bamboo_airways');
 Route::get('/ve-may-bay-gia-re', 'HomeController@ve_may_bay_gia_re');
 Route::post('email-promotion', 'HomeController@email_promotion')->name('email.promotion');
+Route::post('tour-promo-register', 'HomeController@tour_promo_register')->name('tour.promo.register');
 Route::get('/uploads-file', 'HomeController@upload_files')->name('uploads.file');
 Route::post('/tour/book', 'HomeController@book_tour')->name('book.tour');
 Route::get('/flight_data2', 'HomeController@flight_data')->name('flight.data');
@@ -79,6 +80,8 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('dashboard', 'AdminController@show_dashboard');
     Route::post('admin-dashboard', 'AdminController@dashboard')->name('admin.dashboard.process');
     Route::get('email/list', 'AdminController@email_list')->name('admin.email.list');
+    Route::get('tour-promo-popup/list', 'AdminController@tour_promo_popup_list')->name('admin.tour_promo_popup.list');
+    Route::get('tour-promo-popup/delete/{id}', 'AdminController@tour_promo_popup_delete')->name('admin.tour_promo_popup.delete');
     Route::get('pages/list', 'PagesController@listpages')->name('admin.pages.list');
     Route::get('pages/edit/{id}', 'PagesController@pages_edit')->name("admin.pages.edit");
     Route::get('pages/insert', 'PagesController@insert')->name('admin.pages.insert');

@@ -609,6 +609,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Script Google Translate -->
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    @include('inc.tour-promo-slide')
 </body>
 </html>
 

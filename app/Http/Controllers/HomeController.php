@@ -9,6 +9,7 @@ use App\Http\Requests;
 use Mail;
 use App\Models\Menus;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Schema;
 use Carbon\Carbon;
 use App\Models\Payments;
 
@@ -1003,6 +1004,42 @@ class HomeController extends Controller
         DB::table('email_promotion')->insert($data);
         Session::put('message','Bạn đã đăng ký nhận tin khuyến mãi thành công');
         return Redirect::to('https://hoabinhairlines.vn/');
+    }
+
+    public function tour_promo_register(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'tel' => 'required|string|min:10|max:11',
+            'email' => 'nullable|email|max:255',
+            'so_luong_ve' => 'required|integer|min:1|max:99',
+            'chieu_di' => 'required|string|max:255',
+            'chieu_ve' => 'required|string|max:255',
+        ]);
+
+        $row = [
+            'fullname' => $request->name,
+            'phone' => $request->tel,
+            'email' => $request->email ?: '',
+            'num' => (string) $request->so_luong_ve,
+            'date' => $request->chieu_di,
+            'types' => '4',
+            'status' => 'A',
+            'create_at' => Carbon::now(),
+        ];
+
+        if (Schema::hasColumn('contacts', 'address')) {
+            $row['address'] = $request->chieu_ve;
+        } else {
+            $row['date'] = $request->chieu_di . ' → ' . $request->chieu_ve;
+        }
+
+        DB::table('contacts')->insert($row);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Đăng ký thành công! Chúng tôi sẽ liên hệ tư vấn sớm.',
+        ]);
     }
 
     //$data = Item::select("title as name")->where("title","LIKE","%{$request->input('query')}%")->get();
