@@ -232,9 +232,7 @@
         </div>
 
         <div class="tour-promo-slide__form-wrap">
-            <span class="tour-promo-slide__badge">Ưu đãi tour</span>
-            <h2 class="tour-promo-slide__title" id="tourPromoSlideTitle">Nhận ưu đãi du lịch cùng HoaBinh Airlines</h2>
-            <p class="tour-promo-slide__desc">Để lại thông tin — chúng tôi tư vấn lịch trình &amp; báo giá miễn phí.</p>
+            <h2 class="tour-promo-slide__title" id="tourPromoSlideTitle">Để lại thông tin — chúng tôi tư vấn lịch trình &amp; báo giá miễn phí.</h2>
 
             <form id="tourPromoSlideForm" action="{{ route('tour.promo.register') }}" method="post" novalidate>
                 {{ csrf_field() }}
