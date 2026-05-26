@@ -21,6 +21,7 @@
         overflow: hidden;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
         display: flex;
+        align-items: stretch;
         position: relative;
         animation: tourPromoSlideIn 0.35s ease;
     }
@@ -38,17 +39,27 @@
     }
 
     .tour-promo-slide__media {
-        flex: 0 0 392px;
-        max-width: 392px;
+        flex: 0 1 auto;
+        align-self: stretch;
+        width: fit-content;
+        max-width: min(392px, 46vw);
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
         background: #f3f6fb;
     }
 
     .tour-promo-slide__media img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
+        width: auto;
+        height: auto;
+        max-width: 100%;
         display: block;
-        /* aspect-ratio: 9 / 16; */
+        object-fit: contain;
+        object-position: center;
     }
 
     .tour-promo-slide__form-wrap {
@@ -201,13 +212,18 @@
 
         .tour-promo-slide__media {
             flex: none;
+            align-self: auto;
             max-width: 100%;
             width: 100%;
+            padding: 0;
         }
 
         .tour-promo-slide__media img {
-            max-height: 220px;
-            aspect-ratio: 9 / 16;
+            max-height: min(240px, 38vh);
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
         }
 
         .tour-promo-slide__form-wrap {
@@ -227,8 +243,8 @@
             aria-label="Đóng">&times;</button>
 
         <div class="tour-promo-slide__media">
-            <img src="{{ asset('public/frontend/css/images/pop up.png') }}" alt="Ưu đãi tour HoaBinh Tourist" width="300" height="600"
-                loading="lazy">
+            <img src="{{ asset('public/frontend/css/images/pop up.png') }}" alt="Ưu đãi tour HoaBinh Tourist"
+                loading="lazy" decoding="async">
         </div>
 
         <div class="tour-promo-slide__form-wrap">
@@ -286,10 +302,36 @@
             return;
         }
 
+        var formWrap = slide.querySelector('.tour-promo-slide__form-wrap');
+        var promoImg = slide.querySelector('.tour-promo-slide__media img');
+
+        /** Ảnh giữ tỉ lệ gốc; chiều cao tối đa bằng chiều cao cột form (viewport ≥768px). */
+        function syncPromoImgToFormHeight() {
+            if (!formWrap || !promoImg) {
+                return;
+            }
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                promoImg.style.maxHeight = '';
+                return;
+            }
+            var h = formWrap.offsetHeight;
+            promoImg.style.maxHeight = (h > 0 ? h : '') + (h > 0 ? 'px' : '');
+        }
+
+        if (formWrap && promoImg && typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(syncPromoImgToFormHeight).observe(formWrap);
+            if (promoImg.complete) {
+                syncPromoImgToFormHeight();
+            } else {
+                promoImg.addEventListener('load', syncPromoImgToFormHeight);
+            }
+        }
+        window.addEventListener('resize', syncPromoImgToFormHeight);
         function openSlide() {
             slide.classList.add('is-open');
             slide.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+            requestAnimationFrame(syncPromoImgToFormHeight);
         }
 
         function closeSlide() {
