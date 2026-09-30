@@ -24,7 +24,7 @@ Route::get('/ve-bamboo-airways', 'HomeController@ve_bamboo_airways');
 Route::get('/ve-may-bay-gia-re', 'HomeController@ve_may_bay_gia_re');
 Route::post('email-promotion', 'HomeController@email_promotion')->name('email.promotion');
 Route::post('tour-promo-register', 'HomeController@tour_promo_register')->name('tour.promo.register');
-Route::get('/uploads-file', 'HomeController@upload_files')->name('uploads.file');
+Route::get('/uploads-file', 'HomeController@upload_files')->middleware('admin.auth')->name('uploads.file');
 Route::post('/tour/book', 'HomeController@book_tour')->name('book.tour');
 Route::get('/flight_data2', 'HomeController@flight_data')->name('flight.data');
 Route::post('search/name', 'HomeController@getSearchAjax')->name('search');
@@ -77,8 +77,20 @@ Route::get('{slug}', 'NewsController@news_detail');
 Route::group(['prefix'=>'admin'],function(){
     Route::get('/login', 'AdminController@index');
     Route::get('/logout', 'AdminController@logout')->name('admin.logout');
-    Route::get('dashboard', 'AdminController@show_dashboard');
     Route::post('admin-dashboard', 'AdminController@dashboard')->name('admin.dashboard.process');
+});
+
+Route::group(['middleware'=>'admin.auth'],function(){
+    Route::any('/ckfinder/connector', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
+        ->middleware(\App\Http\Middleware\CustomCKFinderAuth::class)
+        ->name('ckfinder_connector');
+    Route::any('/ckfinder/browser', '\CKSource\CKFinderBridge\Controller\CKFinderController@browserAction')
+        ->middleware(\App\Http\Middleware\CustomCKFinderAuth::class)
+        ->name('ckfinder_browser');
+});
+
+Route::group(['prefix'=>'admin','middleware'=>'admin.auth'],function(){
+    Route::get('dashboard', 'AdminController@show_dashboard');
     Route::get('email/list', 'AdminController@email_list')->name('admin.email.list');
     Route::get('tour-promo-popup/list', 'AdminController@tour_promo_popup_list')->name('admin.tour_promo_popup.list');
     Route::get('tour-promo-popup/delete/{id}', 'AdminController@tour_promo_popup_delete')->name('admin.tour_promo_popup.delete');

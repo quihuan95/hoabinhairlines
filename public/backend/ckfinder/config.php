@@ -25,8 +25,9 @@ $config = array();
 /*============================ Enable PHP Connector HERE ==============================*/
 // https://ckeditor.com/docs/ckfinder/ckfinder3-php/configuration.html#configuration_options_authentication
 
+// Standalone connector is not used (admin uses the Laravel package routes); keep it disabled.
 $config['authentication'] = function () {
-    return true;
+    return false;
 };
 
 /*============================ License Key ============================================*/

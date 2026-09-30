@@ -8,6 +8,7 @@ use Session;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
+use App\Support\SafeUpload;
 
 session_start();
 
@@ -87,11 +88,7 @@ class ToursController extends Controller
         $data["country"]=$request->country;
         $get_image = $request->file('image');
         if($get_image){
-            $get_name_image = $get_image->getClientOriginalName();
-            $name_image = current(explode('.',$get_name_image));
-            $new_image =  $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/tours',$new_image);
-            $data['images'] = $new_image;
+            $data['images'] = SafeUpload::storeImage($get_image, 'public/uploads/tours');
         }else{
             $data['images'] = '';
         }
@@ -123,11 +120,7 @@ class ToursController extends Controller
         $data["country"]=$request->country;
         $get_image = $request->file('image');
         if($get_image){
-            $get_name_image = $get_image->getClientOriginalName();
-            $name_image = current(explode('.',$get_name_image));
-            $new_image =  $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/tours',$new_image);
-            $data['images'] = $new_image;
+            $data['images'] = SafeUpload::storeImage($get_image, 'public/uploads/tours');
         }else{
             $data['images'] = $request->hd_images;
         }

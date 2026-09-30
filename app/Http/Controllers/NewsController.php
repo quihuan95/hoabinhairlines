@@ -9,6 +9,8 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
 use App\News;
+use App\Support\SafeUpload;
+use Illuminate\Validation\ValidationException;
 
 
 class NewsController extends Controller
@@ -140,40 +142,18 @@ class NewsController extends Controller
     {
         // kiểm tra có files sẽ xử lý
         if($request->hasFile('photos')) {
-            $allowedfileExtension=['jpg','jpeg','png','pdf'];
-            $files = $request->file('photos');
-            // flag xem có thực hiện lưu DB không. Mặc định là có
-            $exe_flg = true;
-            // kiểm tra tất cả các files xem có đuôi mở rộng đúng không
-            foreach($files as $file) {
-                $extension = $file->getClientOriginalExtension();
-                $check=in_array($extension,$allowedfileExtension);
-
-                if(!$check) {
-                    // nếu có file nào không đúng đuôi mở rộng thì đổi flag thành false
-                    $exe_flg = false;
-                    break;
+            $extensions = ['jpg', 'jpeg', 'png', 'pdf'];
+            $mimes = ['image/jpeg', 'image/png', 'application/pdf'];
+            try {
+                foreach ($request->file('photos') as $photo) {
+                    SafeUpload::store($photo, 'public/userfiles/files', $extensions, $mimes, 'photos');
                 }
-            }
-            // nếu không có file nào vi phạm validate thì tiến hành lưu DB
-            if($exe_flg) {
-                // duyệt từng ảnh và thực hiện lưu
-                foreach ($request->photos as $photo) {
-                    //$filename = $photo->store('photos');
-                    //$filename = $photo->storeAs('photos', $photo->getClientOriginalName());
-                    $get_name_image = $photo->getClientOriginalName();
-                    $name_image = current(explode('.',$get_name_image));
-                    $new_image =  $name_image.'-'.rand(0,99).'.'.$photo->getClientOriginalExtension();
-                    $photo->move('public/userfiles/files',$new_image);
-                }
-                Session::put('message','Upload hình ảnh thành công');
-                return Redirect::to(route('uploads.file'));
-
-            } else {
-                //echo "Falied to upload. Only accept jpg, png photos.";
-                Session::put('message','Falied to upload. Only accept jpg, png photos.');
+            } catch (ValidationException $e) {
+                Session::put('message','Upload thất bại. Chỉ chấp nhận file jpg, png, pdf (tối đa 5MB).');
                 return Redirect::to(route('uploads.file'));
             }
+            Session::put('message','Upload hình ảnh thành công');
+            return Redirect::to(route('uploads.file'));
         }
     }
 
@@ -249,11 +229,7 @@ class NewsController extends Controller
 
         $get_image = $request->file('image');
         if($get_image){
-            $get_name_image = $get_image->getClientOriginalName();
-            $name_image = current(explode('.',$get_name_image));
-            $new_image =  $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/news',$new_image);
-            $data['picture'] = $new_image;
+            $data['picture'] = SafeUpload::storeImage($get_image, 'public/uploads/news');
         }else{
             $data['picture'] = $request->picture;
         }
@@ -299,11 +275,7 @@ class NewsController extends Controller
 
         $get_image = $request->file('image');
         if($get_image){
-            $get_name_image = $get_image->getClientOriginalName();
-            $name_image = current(explode('.',$get_name_image));
-            $new_image =  $name_image.rand(0,99).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/news',$new_image);
-            $data['picture'] = $new_image;
+            $data['picture'] = SafeUpload::storeImage($get_image, 'public/uploads/news');
         }else{
             $data['picture'] = $request->picture;
         }

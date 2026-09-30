@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Session;
 
 class CustomCKFinderAuth
 {
@@ -15,9 +16,12 @@ class CustomCKFinderAuth
      */
     public function handle($request, Closure $next)
     {
-        config(['ckfinder.authentication' => function() {
-            return true;
+        $isAdmin = (bool) Session::get('admin_id');
+
+        config(['ckfinder.authentication' => function () use ($isAdmin) {
+            return $isAdmin;
         }]);
+
         return $next($request);
     }
 }

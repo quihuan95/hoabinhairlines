@@ -22,7 +22,8 @@
 
 $config = array();
 
-$config['loadRoutes'] = true;
+// Routes are registered in routes/web.php so they run inside the "web" (session) and "admin.auth" middleware.
+$config['loadRoutes'] = false;
 
 $config['authentication'] = '\App\Http\Middleware\CustomCKFinderAuth';
 
