@@ -147,6 +147,14 @@
                           Chợ Dừa, Thành phố Hà Nội, Việt Nam
                         </div>
                         <div class="at1" style="font-size:12px !important">
+                          <span class="hbg icon-hbg-hotline"></span>
+                          <a class="click2call" href="tel:0939311911">0939 311 911</a>
+                        </div>
+                        <div class="at1" style="font-size:12px !important">
+                          <span class="hbg icon-hbg-hotline"></span>
+                          <a class="click2call" href="tel:0913311911">0913 311 911</a>
+                        </div>
+                        <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-mail"></span>
                           <a class="click2call" href="mailto:info@hoabinh-group.com">info@hoabinh-group.com</a>
                         </div>
