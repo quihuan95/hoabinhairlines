@@ -872,7 +872,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">
                                 <p class="txt-orange"><b>Văn phòng tại Đà Nẵng</b>
                                 </p>
-                                <p>217 Trần Phú, Hải Châu, Đà Nẵng</p>
+                                <p>50 Vân Đồn, phường Sơn Trà, TP. Đà Nẵng</p>
                                 <p>Tel: 0913 929 182 - 0918 640 988</p>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 p0 location-details">

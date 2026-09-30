@@ -51,6 +51,16 @@
     </style>
 </head>
 <body>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NG1H60X1JL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NG1H60X1JL');
+</script>
+
     <style type="text/css">
         .boxlag { float: right;width: 100%;height: auto;position: relative; }
         .boxlagabs { float: right;position: absolute;right: 0px;top: 2px;z-index: 99999999999; }

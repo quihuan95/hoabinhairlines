@@ -147,9 +147,12 @@
                           Chợ Dừa, Thành phố Hà Nội, Việt Nam
                         </div>
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-hbg-hotline"></span>
-                          <a class="click2call" href="tel:0939311911">0939 311 911</a> -
-                          <a class="click2call" href="tel:0913311911">0913 311 911</a>
+                          <span class="hbg icon-hbg-mail"></span>
+                          <a class="click2call" href="mailto:info@hoabinh-group.com">info@hoabinh-group.com</a>
+                        </div>
+                        <div class="at1" style="font-size:12px !important">
+                          <span class="hbg icon-hbg-web"></span>
+                          <a class="click2call" href="https://hoabinh-group.com">www.hoabinh-group.com</a>
                         </div>
                       </div>
                     </div>
@@ -159,12 +162,11 @@
                       </h2>
                       <div class="f11a1">
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-location"></span>Số 217 Trần Phú, Phường Hải Châu, Thành phố Đà Nẵng,
-                          Việt Nam
+                          <span class="hbg icon-location"></span>50 Vân Đồn, phường Sơn Trà, TP. Đà Nẵng
                         </div>
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-hbg-mail"></span>
-                          <a class="click2call" href="mailto:info@hoabinh-group.com">info@hoabinh-group.com</a>
+                          <span class="hbg icon-hbg-hotline"></span>
+                          <a class="click2call" href="tel:02363996116">0236 399 6116</a>
                         </div>
                       </div>
                     </div>
@@ -178,8 +180,8 @@
                           Việt Nam
                         </div>
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-hbg-web"></span>
-                          <a class="click2call" href="https://hoabinh-group.com">www.hoabinh-group.com</a>
+                          <span class="hbg icon-hbg-hotline"></span>
+                          <a class="click2call" href="tel:02835178383">0283 517 8383</a>
                         </div>
                       </div>
                     </div>

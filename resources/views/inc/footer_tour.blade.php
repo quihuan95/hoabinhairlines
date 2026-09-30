@@ -111,7 +111,7 @@
                             <div>
                                 <p>Văn phòng tại Đà Nẵng</p>
 
-                                <p><i class="fa fa-map-marker mr5" aria-hidden="true"></i> 217 Trần Phú, Hải Châu, Đà Nẵng</p>
+                                <p><i class="fa fa-map-marker mr5" aria-hidden="true"></i> 50 Vân Đồn, phường Sơn Trà, TP. Đà Nẵng</p>
 
                                 <p><i class="fa fa-phone mr5" aria-hidden="true"></i> +84.913.186.829</p>
 
