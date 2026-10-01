@@ -183,7 +183,7 @@
                       <div class="office-box__name">Văn phòng Đại diện tại TP. Hồ Chí Minh</div>
                       <div class="f11a1">
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-location"></span>5 Hoa Cau, Phường Cầu Kiều, TP. Hồ Chí Minh
+                          <span class="hbg icon-location"></span>5 Hoa Cau, Phường Cầu Kiệu, TP. Hồ Chí Minh
                         </div>
                         <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
