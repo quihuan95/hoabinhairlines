@@ -135,16 +135,17 @@
           <div class="">
             <div class="col-xs-12 col-sm-12 col-md-12 p0">
               <div class="row m0mb">
+                @include('inc.office-box-style')
                 <div class="border-page-footer">
                   <div class="row">
                     <div class="office-box col-md-4 npl col-first" style="padding: 0 10px">
-                      <h2 style="margin-bottom: 20px;margin-top: 0px;">
-                        <span class="hbg icon-hanoi"></span>
+                      <h2 class="office-box__logo-wrap">
+                        <img class="office-box__logo" src="https://sgp1.digitaloceanspaces.com/hbg/Logo-%C3%A1nh%20kim-ch%E1%BB%AF-tr%E1%BA%AFng.png" alt="HoaBinh Group" width="170" loading="lazy">
                       </h2>
+                      <div class="office-box__name">Văn phòng Hà Nội</div>
                       <div class="f11a1">
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-location"></span>29 Đoàn Thị Điểm, phường Ô
-                          Chợ Dừa, Thành phố Hà Nội, Việt Nam
+                          <span class="hbg icon-location"></span>29 Đoàn Thị Điểm, Phường Ô Chợ Dừa, TP. Hà Nội
                         </div>
                         <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
@@ -161,12 +162,13 @@
                       </div>
                     </div>
                     <div class="office-box col-md-4" style="padding: 0 10px">
-                      <h2 style="margin-bottom: 20px;margin-top: 0px;">
-                        <span class="hbg icon-danang"></span>
+                      <h2 class="office-box__logo-wrap">
+                        <img class="office-box__logo" src="https://sgp1.digitaloceanspaces.com/hbg/Logo-%C3%A1nh%20kim-ch%E1%BB%AF-tr%E1%BA%AFng.png" alt="HoaBinh Group" width="170" loading="lazy">
                       </h2>
+                      <div class="office-box__name">Văn phòng Đại diện tại Đà Nẵng</div>
                       <div class="f11a1">
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-location"></span>50 Vân Đồn, phường Sơn Trà, TP. Đà Nẵng
+                          <span class="hbg icon-location"></span>50 Vân Đồn, Phường Sơn Trà, TP. Đà Nẵng
                         </div>
                         <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
@@ -175,13 +177,13 @@
                       </div>
                     </div>
                     <div class="office-box col-md-4" style="padding: 0 10px">
-                      <h2 style="margin-bottom: 20px;margin-top: 0px;">
-                        <span class="hbg icon-hcm"></span>
+                      <h2 class="office-box__logo-wrap">
+                        <img class="office-box__logo" src="https://sgp1.digitaloceanspaces.com/hbg/Logo-%C3%A1nh%20kim-ch%E1%BB%AF-tr%E1%BA%AFng.png" alt="HoaBinh Group" width="170" loading="lazy">
                       </h2>
+                      <div class="office-box__name">Văn phòng Đại diện tại TP. Hồ Chí Minh</div>
                       <div class="f11a1">
                         <div class="at1" style="font-size:12px !important">
-                          <span class="hbg icon-location"></span>Số 05 Hoa Cau, Phường Cầu Kiệu, Thành phố Hồ Chí Minh,
-                          Việt Nam
+                          <span class="hbg icon-location"></span>5 Hoa Cau, Phường Cầu Kiều, TP. Hồ Chí Minh
                         </div>
                         <div class="at1" style="font-size:12px !important">
                           <span class="hbg icon-hbg-hotline"></span>
